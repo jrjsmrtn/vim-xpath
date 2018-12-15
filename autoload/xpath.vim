@@ -4,7 +4,7 @@ if exists("g:skip_xpath")
 endif
 
 "Check python is installed
-if !has("python")
+if !(has("python") || has("python3"))
     if !exists("g:quiet_xpath")
         echo 'vim-xpath requires vim to be compiled with python support, and '
                     \ . 'python to be installed. To stop this message from '
